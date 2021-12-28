@@ -18,7 +18,7 @@ import (
 
 func main() {
 	z := zabbixapi.NewZabbix(
-		"192.168.213.127",
+		"192.168.1.127",
 		"Admin", 
 		"zabbix",
 	)
