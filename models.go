@@ -1,4 +1,4 @@
-package methods
+package zabbixapi
 
 type ZabbixConf struct {
 	Host string `toml:"Host"`
