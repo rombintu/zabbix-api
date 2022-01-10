@@ -6,8 +6,6 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
-	"strconv"
-	"time"
 )
 
 func (z *Zabbix) GetRequest(respBody *bytes.Buffer) ([]byte, error) {
@@ -68,13 +66,4 @@ func (z *Zabbix) BuildJsonWithAuth(params interface{}, method string, id int) ([
 		return []byte{}, err
 	}
 	return data, nil
-}
-
-func StrToTime(timeStr string) (string, error) {
-	i, err := strconv.ParseInt(timeStr, 10, 64)
-	if err != nil {
-		return "Error", err
-	}
-	tm := time.Unix(i, 0).String()
-	return tm, nil
 }

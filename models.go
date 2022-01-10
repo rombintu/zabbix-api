@@ -1,16 +1,5 @@
 package zabbixapi
 
-type ZabbixConf struct {
-	Host string `toml:"Host"`
-	User string `toml:"User"`
-	Pass string `toml:"Password"`
-}
-
-type Zabbix struct {
-	Conf  ZabbixConf
-	Token string
-}
-
 type Error struct {
 	Code    int    `json:"code"`
 	Message string `json:"message"`
